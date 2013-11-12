@@ -1,0 +1,42 @@
+Logic
+a logical system is a formal system along with formal semantics
+    A formal system has an alphabet
+    It has a grammar for constructing well formed formulas
+    It has certain axioms
+    It has certain rules of deduction
+
+A logical system has two parts, a syntactic componenet(proof theory) and a
+semantic component (called model theory).
+
+The syntactic component essentially deals with manipulation of formula to prove
+statements, several proof systems exists:
+    1. Natural deduction
+    2. Resolution Refutation
+    3. etc
+
+The semantic component assigns a meaning to all these statements and then tries
+to interpret the validity of other statements.
+
+We say that a statement is derivable if there exists a proof for it, that is
+starting from theorems and axioms and using inference rules, we can conclude
+that particular statement.
+
+We say that a statement is true or valid if under all interpretations, it is
+assigned a truth value of true.
+
+Godel's completeness theorem forms the link between model theory and proof
+theory.
+A sound system is one in which all the statements which can be derived by the
+grammar are true.
+A complete system is one in which all the true statements are derivable
+
+Entailment means logical consequence, under a set of premises, what can be
+concluded.
+
+Proof theory is syntactic manipulation. For example P and Q in proof theory
+implies P and it implies Q. There is not extra meaning of and. But in model
+theory we say that and returns true whenever both it's statements are true.
+
+Decidability deals with model theory and deals with the fact whether the
+validity of a statement can be checked or not.
+Propositional Logic is decidable while First Order logic is not.

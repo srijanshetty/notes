@@ -1,0 +1,10 @@
+A formal system is a well defined system of abstract thought.
+It consists of 
+    A formal system has an alphabet
+    It has a grammar for constructing well formed formulas
+    It has certain axioms
+    It has certain rules of deduction
+
+When we talk about formalism, we mean that there exists a formal system for this
+system
+
