@@ -1,0 +1,44 @@
+
+Product type:
+    This type represents a combination of two different types of entites tied
+    together. The best example is the cartesian product A x B, or a tuple (A,B).
+    If we have tuple we can get the individual type of element back.
+    A Haskell example is
+
+    data Exp = Plus Int Double
+
+    Exp is a data type which has an element Plus which is a product type of Int
+    and Double
+
+Disjoint Union:
+    The idea of disjoint union is that it is a union of different elements in
+    which you know exactly which set a particular element belongs to. The best
+    example is illustrated by Haskell.
+
+    data Either a b = Left a | Right b
+
+    Here Either is a Disjoint Union type. So, each element is an element of
+    Either and it can be either Left a or Right b. 
+
+Enums:
+The correct way to use an enum is:
+
+    enum values {FIRST,SECOND};
+    enum values some_value = FIRST;
+
+Unions:
+The correct way to use a union is:
+
+    union Data {
+        int i;
+        float f;
+    } data;
+
+    data.i = 10;
+    data.f = 10.0;
+
+    // Note the value of data.i gets corrupted once we initialize it with data.f
+
+At a time a union holds only one piece of information, also the size of a union
+data type is the largest of it's elements
+
