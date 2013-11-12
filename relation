@@ -1,0 +1,21 @@
+
+Reflexive relation:
+    x ~ x
+
+Symmetric relation
+
+Pre-order:
+    Reflexive
+    Transitive
+
+Partial-order:
+    Reflexive
+    Transitive
+    anti-symmetric
+
+Total order:
+    Transitive
+    anti-symmetric
+    total
+
+

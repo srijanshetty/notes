@@ -1,0 +1,43 @@
+-------------------------------------------------------------------------------
+Imperative Programming:
+This is a programming paradigm which resembles the way code is executed in a
+machine, it is very low level in some sense.
+It is mostly sequential programming, with a lot of manipulation of program state
+
+We have constructs like:
+    1. loops
+    2. if
+    3. case
+
+A variable represents a memory location and we can directly manipulate it.
+-------------------------------------------------------------------------------
+-------------------------------------------------------------------------------
+Declarative Programming:
+Instead of giving a series of steps to accomplish a task, we essentially spell
+out what the program is supposed to do. For example consider the quicksort
+program in haskell
+
+>quicksort [] = []
+>quicksort (x:xs) = smaller xs ++ x ++ larger xs
+        where smaller y = [ z | z<-y, z<=x]
+              larger y  = [ z | z<-y, z>x]
+
+Here we have define what quicksort does rather than give a series of steps to
+accomplish the task. Very common approaches of declarative programming are:
+    Functional
+    Logic
+
+There is very little or no manipulation of state
+-------------------------------------------------------------------------------
+-------------------------------------------------------------------------------
+Concurrent Programming:
+In case of concurrent programming we have multiple threads which are running
+together. Note together here does not mean they are running simultaneously; the
+threads can be running parallely or they may run with pre-emption.
+Two models are used for synchronization:
+    1. Message Passing
+    2. Shared memory
+-------------------------------------------------------------------------------
+-------------------------------------------------------------------------------
+
+

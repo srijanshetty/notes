@@ -1,0 +1,14 @@
+Communtative: 
+    x+y = y+x
+
+Associative:  
+    (x+y)+z = x+(y+z)
+
+Distributive:
+    x.(y+z) = x.y+x.z
+
+Idempotence:
+    Appling the same operation multiple times yields the same result as applying
+    it once
+    f(f(x)) = f(x)
+
