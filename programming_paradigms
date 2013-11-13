@@ -34,9 +34,15 @@ Concurrent Programming:
 In case of concurrent programming we have multiple threads which are running
 together. Note together here does not mean they are running simultaneously; the
 threads can be running parallely or they may run with pre-emption.
+
 Two models are used for synchronization:
     1. Message Passing
     2. Shared memory
+
+There's also this concept of atomic commits or transactional memory in case of
+concurrency. An atomic commit or a transaction is a set of operations which are
+atomic, they are performed together or are not performed at all. This ensures
+consistency in the data at the Data Center.
 -------------------------------------------------------------------------------
 -------------------------------------------------------------------------------
 
