@@ -1,0 +1,25 @@
+Call by value:
+    Copy the value to the function
+
+Call by refernce:
+    Use the function address, to reference back to the same function
+
+Call by need:
+    Evaluate the arguments only when needed and store this evaluations
+
+Call by name:
+    Copy the entire expression of the argument and evaluate every time when
+    needed.
+
+Short Circuit evaluation:
+    Evaluate the second parameter only if needed. Examples are short circuit
+    AND, OR and the like.
+
+Top-down:
+    Divide and conquer algorithm ;
+    where we break a large problem into smaller ones without knowing what the
+    sub-sytems are; the sub-systems are then specified in great details.
+
+Bottom-up:
+    Dynamic Programming;
+    here we see the smaller problem and then compose to form the larger problem.

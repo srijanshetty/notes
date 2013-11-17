@@ -45,5 +45,26 @@ atomic, they are performed together or are not performed at all. This ensures
 consistency in the data at the Data Center.
 -------------------------------------------------------------------------------
 -------------------------------------------------------------------------------
+Object Oriented Programming:
+Object oriented programming consists of classes, which encapsulate methods and
+variables together. It provides abstraction by the means of public, private and
+protected members.
 
+The relation "is a" is an dependence relation and is captured by 
+inheritance: single, multiple etc.
 
+The relation "has a" is an aggregation relation which is what encapsulation
+stands for.
+-------------------------------------------------------------------------------
+-------------------------------------------------------------------------------
+Polymorphism:
+Parametric polymorphism is to write a function generically so that it handles
+all types identically. Such polymorphism in the OOP world is called parametric
+polymorphism while in the functional world it is called plain polymorphism.
+The programming paradigm is called generic programming.
+
+Ad hoc polymorphism or overloading is when a function can have multiple
+implementaions depeding on the number and types of arguments. This is called
+function overloading or method overloading.
+-------------------------------------------------------------------------------
+-------------------------------------------------------------------------------
