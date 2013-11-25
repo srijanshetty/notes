@@ -1,0 +1,18 @@
+X-bit aligned:
+If something in memory is x-bit aligned, this means we can only occupy the
+memory locations which are multiples of x.
+Example 4 byte aligned means, that the memory locations in which data will be
+placed are 0, 4, 8, 16 ..
+
+Necessay and sufficient:
+
+        -------------------------
+        | N -----------------   |
+        | E | C ---------   |   |
+        | C | O |       |   |   |
+        | E | N | SUFF  |   |   |
+        | S | D |       |   |   |
+        |   |   ---------   |   |
+        |   -----------------   |
+        -------------------------
+        
