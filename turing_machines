@@ -20,7 +20,3 @@ computation that we have.
 Problems are unsolvable because of their intinsic hardness. Acceptance problem
 is hard because we cannot determine if the TM will loop on an input or not.
 
-Taking multiple paths a single step at a time ensures that we reach multiple
-infinites. Taking a single infinite path can lead us to a single infinity.
-
-
