@@ -1,6 +1,6 @@
 --------------------------------------------------------------------------------
 --------------------------------------------------------------------------------
-window
+Window Object
 The global object, the following are the methods of the global object
     setInterval
     setTimeout
@@ -8,35 +8,75 @@ The global object, the following are the methods of the global object
     confirm
     prompt
 --------------------------------------------------------------------------------
---------------------------------------------------------------------------------
-document
+Document Object
 This is the most important object of the DOM. It holds all the important methods
 that we will use.
-
+--------------------------------------------------------------------------------
+Nodes
 Each element in the DOM is called a node.
+
 Types of Nodes
     Document Fragment
     Element Node
     Attribute node
     Comment Node
     Text Node
-
+--------------------------------------------------------------------------------
 Adding elements to the DOM
     element.appendChild(childNode)
     element.insertBedore(newNode)
+--------------------------------------------------------------------------------
+Removing elements from the DOM
+    element.removeChild(childNode)
+--------------------------------------------------------------------------------
+DOM traversal
+    element.parentNode
+    element.childNodes
+    element.children
+    element.nextSibling
+    element.previousSibling
+    element.lastChild
+    element.firstChild
 
+    element.lastElementChild
+    element.firstElementChild
+    element.nextElementSibling
+    element.previousElementSibling
+--------------------------------------------------------------------------------
 Replacing elements
     element.replaceChild(newChild, oldChild)
-
+--------------------------------------------------------------------------------
 Cloning elements
     element.cloneNode(true)
-
+--------------------------------------------------------------------------------
 Obtaining a reference of the DOM elements
+    document.getElementsByTagName(tagname)
+    document.getElementsById(id)
+    document.getElementsByClassName(className)
+    document.querySelector(selector)
+    document.querySelectorAll(selector)
 
-document.getElementsByTagName(tagname)
-document.getElementsById(id)
-document.getElementsByClassName(className)
-document.querySelector(selector)
-document.querySelectorAll(selector)
+    Note: the nodelist returned by querySelector is not a live List
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+Style
 
-Note: the nodelist returned by querySelector is not a live List
+Adding styles to the element
+Just assign the style to the style property of the element in question
+    element.style.backgroundColor = white;
+
+Obtaining the computed style of the element
+    getComputedStyle(element, null).getPropertyValue("propertyName");
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+Events
+
+DOM Level 0 events
+They are volatile and are directly used by using the onevent property of the
+element.
+    element.onclick = someFunction;
+
+Standard event model
+
+
+
