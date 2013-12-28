@@ -1,0 +1,42 @@
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+window
+The global object, the following are the methods of the global object
+    setInterval
+    setTimeout
+    alert
+    confirm
+    prompt
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+document
+This is the most important object of the DOM. It holds all the important methods
+that we will use.
+
+Each element in the DOM is called a node.
+Types of Nodes
+    Document Fragment
+    Element Node
+    Attribute node
+    Comment Node
+    Text Node
+
+Adding elements to the DOM
+    element.appendChild(childNode)
+    element.insertBedore(newNode)
+
+Replacing elements
+    element.replaceChild(newChild, oldChild)
+
+Cloning elements
+    element.cloneNode(true)
+
+Obtaining a reference of the DOM elements
+
+document.getElementsByTagName(tagname)
+document.getElementsById(id)
+document.getElementsByClassName(className)
+document.querySelector(selector)
+document.querySelectorAll(selector)
+
+Note: the nodelist returned by querySelector is not a live List

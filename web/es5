@@ -1,0 +1,61 @@
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+Objects
+--------------------------------------------------------------------------------
+newObject = Object.create(parentObject)
+Object.preventExtensions(object)
+Object.isExtensible(object)
+    New properties cannot be added to the object, while old ones can be edited or configured 
+--------------------------------------------------------------------------------
+Object.seal(object)
+Object.isSealed(object)
+    New properties cannot be added, neither can the properties be configures. They
+    can only be edited.
+--------------------------------------------------------------------------------
+Object.freeze(object)
+Object.isFrozen(object)
+    The object is immutable.
+--------------------------------------------------------------------------------
+Object.getPrototypeOf(object)
+someObject.isPrototypeOf(someOtherObject)
+--------------------------------------------------------------------------------
+Object.keys(object)
+    Returns all the enumerable keys of an object
+--------------------------------------------------------------------------------
+Object.getPropertyNames(object)
+    Returns an array of all the property names that belong to that object.
+--------------------------------------------------------------------------------
+Object.defineProperty(object, propertyName, descriptor)
+Object.defineProperties(object, descriptors)
+    A property descriptor contains the following attributes:
+        value
+        get
+        set
+        enumerable
+        configurable
+        writtable
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+Arguments:
+arguments in ES5 is more array like in the sense, that all the newly added
+functions of ES5 for arrays can be used with arguments. Also most of the older
+methods of arrays can now be used with arguments.
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+this in inner function:
+this in the inner function now points to null instead of the global object
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+Trailing commas:
+trailing commas are now ignored
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+Multiline strings:
+JavaScript now supports bash like multi line comments
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+property names:
+Property names need not be quoted in ES5.
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+
