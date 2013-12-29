@@ -24,7 +24,7 @@ Types of Nodes
 --------------------------------------------------------------------------------
 Adding elements to the DOM
     element.appendChild(childNode)
-    element.insertBedore(newNode)
+    element.insertBefore(newNode)
 --------------------------------------------------------------------------------
 Removing elements from the DOM
     element.removeChild(childNode)
@@ -59,24 +59,60 @@ Obtaining a reference of the DOM elements
     Note: the nodelist returned by querySelector is not a live List
 --------------------------------------------------------------------------------
 --------------------------------------------------------------------------------
-Style
 
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+STYLE
+--------------------------------------------------------------------------------
 Adding styles to the element
 Just assign the style to the style property of the element in question
     element.style.backgroundColor = white;
-
+--------------------------------------------------------------------------------
 Obtaining the computed style of the element
     getComputedStyle(element, null).getPropertyValue("propertyName");
 --------------------------------------------------------------------------------
 --------------------------------------------------------------------------------
-Events
 
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+EVENTS
+--------------------------------------------------------------------------------
 DOM Level 0 events
 They are volatile and are directly used by using the onevent property of the
 element.
     element.onclick = someFunction;
-
+--------------------------------------------------------------------------------
 Standard event model
+    element.addEventListener("eventName", functionObject, false);
+    element.removeEventListener("eventName", functionObject, false);
 
+THe this keyword in the standard event model refers to the element on which the
+event happened.
+    this
+    evt.target
+    evt.preventDefault()
+    evt.type
+
+Legacy IE event model
+    element.attachEvent("onclick", functionObject)l;
+    element.detachEvent("onclick", functionObject)l;
+
+Here "this" refers instead to the global object and we cannot make use of it.
+Also we make use of the global event object which contains all the important
+information
+    that = event.srcElement
+    event.type
+    event.returnValue = false;
+
+--------------------------------------------------------------------------------
+Phases of events
+Ther are three phases in any event actvity, 
+    Capture: it is a traversal from the root of the DOM to the event that was
+    clicked.
+
+    Bubbling: it is a traversal from the element that was clicked to the root of
+    the DOM
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
 
 
