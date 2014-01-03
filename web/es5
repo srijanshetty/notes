@@ -40,6 +40,9 @@ Arguments:
 arguments in ES5 is more array like in the sense, that all the newly added
 functions of ES5 for arrays can be used with arguments. Also most of the older
 methods of arrays can now be used with arguments.
+
+Object and Array:
+Changing the Object and Array constructor does not cause any effect to {} or []
 --------------------------------------------------------------------------------
 --------------------------------------------------------------------------------
 this in inner function:
@@ -58,4 +61,16 @@ property names:
 Property names need not be quoted in ES5.
 --------------------------------------------------------------------------------
 --------------------------------------------------------------------------------
+Array extras
 
+The following are the new array methods introduced in ES5:
+
+    array.map();
+    array.reduce();
+    array.reduceRight();
+    array.every();
+    array.some();
+    array.filter();
+    array.forEach();
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------

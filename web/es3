@@ -1,0 +1,19 @@
+Array methods
+
+Mutator methods
+
+    Array.prototype.push()
+    Array.prototype.pop()
+    Array.prototype.shift()
+    Array.prototype.unshift()
+    Array.prototype.splice()
+    Array.prototype.sort()
+    Array.prototype.reverse()
+    Array.prototype.concat()
+
+Accesor methods
+
+    Array.prototype.isArray()
+    Array.prototype.slice()
+    Array.prototype.join()
+    
