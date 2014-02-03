@@ -1,0 +1,58 @@
+--------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------
+#Space
+A space is a set with some structure.
+
+A structure is a set with some mathematical object which makes it easier to study the set.
+
+Mathematical objects are numbers, funtions, relations
+--------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------
+#Analysis
+Mathematical Analysis deals with differntiaion, integration, infinite series and sequences,
+limits and analytic functions.
+
+Calculus is the study of change and includes differentiation, integration, infinite sequences.
+--------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------
+#Number Theory
+The queen of mathematics, deals with the properties of integers.
+--------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------
+#Algebra
+Algebra is the study of operations and their application in solvind equations. The operations
+can be applied to any mathematical objects. Linear algebra, abstract algebra.
+
+Linear Algebra is the study of vector spaces and linear transformations.
+
+A vector space is an abelian group which is closed under addition and scalar multiplication
+by any field.
+--------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------
+#Geometry
+Geometry is the study of shapes.
+
+Analytic Geometry or Cartesian Geometry is the study of shapes using formulae and analysis 
+and algebra. The idea is to represent shapes with equations and derive numerical
+information about them from this.
+
+Synthetic Geometry is the study of shapes without recourse to analysis and algebra.
+
+Euclidean Geometry deals with a certain set of premises and deductions that can 
+be made from them.
+
+Computational Geometry : algorithmic problems that can be expressed in terms of 
+geometry.
+--------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------
+#Reasoning
+Open world assumption : Everything not known may be true.
+
+Closed domain of discourse : Everything not known is false.
+
+Deduction reasoning : From premises, infer conclusions in a closed domain of discourse
+
+Inductive reasoning : From premises, come to the most probable conclusion using
+the open world assumption.
+--------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------
