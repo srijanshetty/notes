@@ -1,0 +1,58 @@
+# Stationary Process
+---------------------------------------------
+A process is called stationary if the values attained by the process are within certain
+epsilon bounds.
+
+# Independent and Identically Distributed
+---------------------------------------------
+This is one of the assumptions made before statistical inference. This means the following:
+
+1. The data is randomly scattered about the mean, and shows no trends in this scattering.
+2. The data has a constant variance and this variance has no systematic trends. 
+3. The data points are independent of each other.
+
+In a gist, a sample is random if it is stationary and independent. In a time series plot or 
+a run chart, this translates to the following:
+
+1. Compared to a random order plot of the same data, the original plot is not smooth. 
+( This means that there is no dependence, because dependence brings in smoothness. )
+2. With time the scattering of data does not change systematically.
+3. With time, the scattering of data does not change systematically.
+
+Note: Systematically over here means an increasing/decreasing trend or any general trend.
+
+# Statistical Inference
+---------------------------------------------
+These are inferences on the data which have statistical backing in terms of a number
+which expresses the reliability.
+
+In a population, you have all the measurements at your disposal. While in the case of a 
+process, the data points are being generated.
+
+## Sampling a Population
+The following features are desirable from any sample:
+
+1. It should be IID.
+2. It should be representative of the population, i.e., the distribution of the sample
+must be similar to the distribution of the population.
+3. There should exist some mathematical relationship between the sample and the
+population.
+
+### Simple Random Sampling
+Every 'n' subset of the population has an equal chance of being in the subset. (The chosen
+'n' is small compared to the population and the population is assumed to be stationary when 
+the sampling is going on). A certain caveat needs to be stated here, a sampling where every
+member has an equal probability of being in the sample need not be SRS. Consider for example 
+case in which we have two decks of black and red cards and we select five cards on the basis
+of a coin toss. In such a scenario, each individual card has an equal chance of being in the 
+final deck but in no hand will red and black cards be together.
+
+## Sampling a Process
+We use systematic sampling instead of SRS. In case of systematic sampling, we chose a 'k' 
+from the first 'm' items and the same 'k' henceforth.
+This is better than SRS because it can create an IID sample even if the process is not IID,
+because the dependency between adjacent observations, dies off with distance. Also, this can
+capture scenarios where the production line may have failed after the afternoon and the SRS
+sample only had data points in the morning.
+
+
