@@ -61,20 +61,3 @@ theory.
 A sound system is one in which all the statements which can be derived by the
 grammar are true.
 A complete system is one in which all the true statements are derivable
-
-# Boolean Laws
------------------------------------
-Communtative: 
-    x+y = y+x
-
-Associative:  
-    (x+y)+z = x+(y+z)
-
-Distributive:
-    x.(y+z) = x.y+x.z
-
-Idempotence:
-    Appling the same operation multiple times yields the same result as applying
-    it once
-    f(f(x)) = f(x)
-

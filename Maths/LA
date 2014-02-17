@@ -1,0 +1,16 @@
+
+The inverse of a diagonal matrix is equal to inverse of its diagonal entries
+
+An invertible matrix is of full rank
+
+A positive definite matrix is one such that z'Mz > 0 for all z.
+
+z'z is symmetric
+
+In case the covariance matrix is diagonal, then the gaussian distribution is a product of
+individual components.
+
+Level sets and isocountours.
+
+Multivariate Gaussians
+
