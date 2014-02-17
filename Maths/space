@@ -1,17 +1,17 @@
---------------------------------------------------------------------------------------------
---------------------------------------------------------------------------------------------
 #Space
+--------------------------------------------------------------------------------------------
 A space is a set with some structure.
 
 A structure is a set with some mathematical object which makes it easier to study the set.
 
 Mathematical objects are numbers, funtions, relations
---------------------------------------------------------------------------------------------
---------------------------------------------------------------------------------------------
-Topological Space
---------------------------------------------------------------------------------------------
---------------------------------------------------------------------------------------------
-Metric Space
+
+# Topology
+Also called rubber sheet geometry, it is geometry in the most basic form. 
+The notion of size and angle is dropped and we consider only shape. 
+Also any transformation of the shape which keeps it continious like squashing and stretching are allowed (but cutting and pasting are not).
+
+# Metric Space
 Is a set with R with a metric function d which satisfies the natural properties of a "metric"
 or distance.
 
@@ -23,5 +23,3 @@ d(x,y) = d(y,x)
 
 Triangle Inequality
 d(x,z) <= d(x,y) + d(y,z)
---------------------------------------------------------------------------------------------
---------------------------------------------------------------------------------------------
