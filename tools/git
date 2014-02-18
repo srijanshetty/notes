@@ -1,0 +1,78 @@
+# git stash
+-----------
+In case you have switch branches and don't want to commit the dirty state, you can stash changes.
+
+    git stash save "message"
+
+Now when you have completed the other feature and you return, you can
+
+    git stash apply stash@{1}
+
+This will apply the stash but not delete it, you can as well
+
+    git stash pop
+
+To list all the stashes, we use
+
+    git stash list
+
+To delete a stash entry, run the command
+
+    git stash drop
+
+A handy feature is to create a new branch from a stash, which takes you to the state you were when
+stashing. (This particular feature has the additional benefit of dropping the stash as well)
+
+    git stash branch "test"
+
+Note: The index and the working directory get stashed, so when you apply the stash, the changes in 
+the index appear in your working directory as well. stash also provides the option of restoring the
+state of the index with
+
+    git stash apply --index
+
+# removing files
+----------------
+To remove a file from the current working directory use
+
+    git rm <filename>
+
+To stop tracking a file, we can add it into the gitignore, but this will not work if the file was already
+being tracked. In such a scenario, the following command needs to be run to stop tracking the file.
+
+    git rm --cached <filename>
+
+Note: The file remains in the history even after these operations
+
+# git diff
+----------
+Git diff provides multitude of options. For starters, by defualt it views the difference between the working
+copy and the index
+
+    git diff
+
+To see the difference between the working copy and HEAD, one could run
+
+    git diff HEAD
+
+Another useful diff is that between the HEAD and the index, which essentially tells you about the commit
+
+    git diff --cached HEAD
+
+git diff is really versatile because it can show the diff between any two commits as well
+
+    git diff <commit1> <commit2>
+
+Sometimes, we don't want to see the entire diff of the repo but that of a single file, in such a case we can run
+
+    git diff <filename>
+
+# git tag
+---------
+Always use an annotated tag so that git describe can be used later on
+
+    git tag -am "This is a tag"
+
+# git describe
+--------------
+Gives the number of commits relative to a previous tag which was made.
