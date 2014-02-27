@@ -14,3 +14,19 @@ Level sets and isocountours.
 
 Multivariate Gaussians
 
+# Linear Transformations
+------------------------
+They change the basis and in doing so, they can only rotate, expand, shrink or translate 
+the basis
+
+# Superposition in LA
+---------------------
+
+1. A[x y z] = [Ax Ay Az]
+2. Ae_i = C_i
+3. Multiplication of two matrices and IP
+4. Linear combination: (Row-row/ Column-column)
+    1. If the vectors are the columns of M then Y = MA.
+    2. If they are the rows of M then Y = AM
+
+
