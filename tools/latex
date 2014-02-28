@@ -1,0 +1,34 @@
+# Some tricks
+
+## Author Style
+- Use the package authblk
+- The code is
+~~~~
+\usepackage{authblk}
+
+\author[1]{Srijan R. Shetty \thanks{srijans@iitk.ac.in}}
+\affil[1]{Department of Computer Science and Engineering, Indian Institute of Technology, Kanpur}
+~~~~
+
+## The margins of the document
+~~~~
+\topmargin -0.5in
+\advance \topmargin by -\headheight
+\advance \topmargin by -\headsep
+\textheight 9.9in
+\oddsidemargin 0pt
+\evensidemargin \oddsidemargin
+\marginparwidth 0.5in
+\textwidth 6.5in
+
+\parindent 0in
+\parskip 1.5ex
+~~~~
+
+## Color the document
+
+~~~~
+\usepackage{color}
+\textcolor{green}{SOme text}
+~~~~
+
