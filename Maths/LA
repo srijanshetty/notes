@@ -18,6 +18,7 @@ Multivariate Gaussians
 ------------------------
 They change the basis and in doing so, they can only rotate, expand, shrink or translate 
 the basis
+Every Linear Transformation can be expressed as a Matrix. 
 
 # Superposition in LA
 ---------------------

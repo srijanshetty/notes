@@ -45,5 +45,10 @@ The proof of this fact is simple.
     b-a = d(k-m)
 
 Now if d is the gcd(a,b) then it is the greatest number that divides both a and b.
-Also, every other divisor of a and b is a divisor of the gcd. So the greatest divisor
-of b and b-a will be the gcd(a,b).
+Now, the gcd of d.m and d.(k-m) will obviously be d.
+
+## Salient points
+- Commutative.
+- Associative. gcd(a, gcd(b,c)) = gcd(gcd(a,b), c)
+- Every divisor of a and b is a divisor of the gcd.
+
