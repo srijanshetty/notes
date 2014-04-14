@@ -3,15 +3,16 @@
 ## Author Style
 - Use the package authblk
 - The code is
-~~~~
+
+```latex
 \usepackage{authblk}
 
 \author[1]{Srijan R. Shetty \thanks{srijans@iitk.ac.in}}
 \affil[1]{Department of Computer Science and Engineering, Indian Institute of Technology, Kanpur}
-~~~~
+```
 
 ## The margins of the document
-~~~~
+```latex
 \topmargin -0.5in
 \advance \topmargin by -\headheight
 \advance \topmargin by -\headsep
@@ -23,12 +24,18 @@
 
 \parindent 0in
 \parskip 1.5ex
-~~~~
+```
 
 ## Color the document
 
-~~~~
+```latex
 \usepackage{color}
 \textcolor{green}{SOme text}
-~~~~
+```
+
+## Hyperlinks
+
+```latex
+\usepackage[hidelinks,colorlinks]{hyperref}
+```
 
