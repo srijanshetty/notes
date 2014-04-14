@@ -39,3 +39,24 @@
 \usepackage[hidelinks,colorlinks]{hyperref}
 ```
 
+## Code
+
+```latex
+\usepackage{listings}
+\lstset{                                                                                                                                           
+basicstyle=\footnotesize\sffamily\color{black},
+commentstyle=\color{mygray},
+frame=single,
+numbers=left,
+numbersep=10pt,
+numberstyle=\tiny\color{mygray},
+keywordstyle=\color{mygreen},
+showspaces=false,
+showstringspaces=false,
+stringstyle=\color{myorange},
+tabsize=2,
+language=C++
+}
+
+\lstinputlisting{filname}
+```
