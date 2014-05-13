@@ -19,7 +19,7 @@ AND, OR and the like.
 ## Parameter Passing
 - Call by value:
     Copy the value to the function
-- Call by refernce:
+- Call by reference:
     Use the function address, to reference back to the same function
 - Call by need:
     Evaluate the arguments only when needed and store this evaluations
@@ -33,6 +33,33 @@ from association of a value to a variable, code to a function etc.
 
 ## Dynamic Dispatch
 Selection of the function to be called at runtime.
+The reason for implementation is simple:
+- So, we have an object of a type, it will have a virtual function table. The vf table
+stores pointers to the function.
+- If the derived class has overridden a virtual function
+then we need to select the overridden method, else we need to select the original
+implementation.
+- This entire concept is nicely handled by pointer redirection and vft's and hence we
+need dynamic dispatch.
+
+## Static Dispatch
+- Hard code the function address directly.
+
+# Dynamic Languages
+
+```javascript
+var obj = {};
+obj['name'] = 'srijan';
+```
+- We have dynamically created the property 'name'.
+- Since it is an interpreted language, when obj is created,
+we have no clue that it can have such a property. Hence, we cannot
+allocate space beforehand, same is true for functions.
+- Hence we say that the list of methods can be altered at runtime.
+
+## Late binding
+- Due to the above reasons, we have to late bind all references to variables
+using a hash table (or like v8, we can use hidden classes)
 
 ### References
 - [http://condor.depaul.edu/ichu/csc447/notes/wk10/Dynamic2.htm]
