@@ -66,5 +66,55 @@ The programming paradigm is called generic programming.
 Ad hoc polymorphism or overloading is when a function can have multiple
 implementaions depeding on the number and types of arguments. This is called
 function overloading or method overloading.
--------------------------------------------------------------------------------
--------------------------------------------------------------------------------
+
+## Interfaces
+- They are abstract classes, they only specify the functions that need to be
+implemented and the dirty work of implementing them is left to each and every
+class that derive from them.
+- So, we can say that a class matches an interface.
+- The idea is really powerful and extensible. We can have a interface callled
+iterable and anything that wants to iterate should match the specifications
+of the interface. Then the for loop can be designed to work with iterables.
+
+## Subtyping
+
+```c++
+class Base {
+}
+
+class Child : Base {
+}
+
+Base[] items = new Base[10];
+item[0] = new Child();
+```
+
+- here it doesn't matter that the array is of Base, because
+Child will have all of Base's methods.
+- The compiler will only use the name of methods of Base,
+and they will be present in the virtual function table of Child.
+- Also dynamic dispatch will be needed here because we have no clue
+if Child overides any methods of Base.
+- It is not necessary to have late binding, because we know for sure
+that such a method exists.
+- Subtyping means that anywhere the supertype can be used, the subtype can
+be used.
+
+# Generic Programming
+- The central idea of generic programming is write code which can work for
+all types, i.e., parametric polymorphism is the impetus of this style of
+coding.
+- Functional languages have a transparent support for generic programming.
+- C++ family of languages use templates to implement this
+
+```c
+template <typename T>
+class Stack {
+    T list[];
+
+    void Stack<T>::push(T item);
+
+}
+```
+
+- Similarly we can have generic functions as well.

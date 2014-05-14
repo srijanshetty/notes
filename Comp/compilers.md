@@ -60,6 +60,8 @@ allocate space beforehand, same is true for functions.
 ## Late binding
 - Due to the above reasons, we have to late bind all references to variables
 using a hash table (or like v8, we can use hidden classes)
+- Late binding is also done using function pointers. That is we assume that
+the function's address is stored in some function pointer and we use that pointer.
 
 ### References
 - [http://condor.depaul.edu/ichu/csc447/notes/wk10/Dynamic2.htm]
