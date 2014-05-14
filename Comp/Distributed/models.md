@@ -1,5 +1,5 @@
 # Google's Map Reduce
-- An abstraction for parrallel, distributed data tasks.
+- An abstraction for parallel, distributed data tasks.
 - The programmer need only write two functions and a specification
 object which provides the tuning parameters.
 - Map: take key/values and convert them into intermediate key/values
