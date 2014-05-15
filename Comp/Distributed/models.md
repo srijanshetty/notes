@@ -51,6 +51,10 @@ a fragment of code/computation and the edges being channels of computation.
     - Job Monitoring and Visualization
 
 ## Design
+- Is a distributed execution environment. A middleware between the program and the
+underlying cluster architecture.
+    - This allows it to be oblivious of the programming models semantics above it
+    and completely focus on fault tolerance and scheduling.
 - 2D pipelining.
     - grep | awk | sed
     - grep^100 | awk ^10 | sed^50
@@ -95,5 +99,3 @@ keys land up in the same machine.
 ## DraydLINQ
 - It is a Dryad job creator which can create Dryad computations from LINQ extensions
 to C#.
-
-
