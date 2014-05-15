@@ -65,7 +65,21 @@ Ad hoc polymorphism or overloading is when a function can have multiple
 implementaions depeding on the number and types of arguments. This is called
 function overloading or method overloading.
 
-## Interfaces
+## Inheritance
+
+### Virtual functions
+They are functions that can be overridden by the derived class.
+
+### Extension Methods
+- While most classes have instance methods which can be called upon any type
+- C# has the notion of extension methods, which can extend any interface and
+type
+    - These extension methods look exactly like the instance methods during
+    call.
+    - The advantage is that they allow the base classes to be modified without
+    changing them.
+
+### Interfaces
 - They are abstract classes, they only specify the functions that need to be
 implemented and the dirty work of implementing them is left to each and every
 class that derive from them.
@@ -74,7 +88,18 @@ class that derive from them.
 iterable and anything that wants to iterate should match the specifications
 of the interface. Then the for loop can be designed to work with iterables.
 
-## Subtyping
+```c#
+interface Base {
+    public void someMethod();
+}
+
+class Child : Base {
+    Base.someMethod() {
+        // Write the definition over here
+    }
+}
+
+### Subtyping
 
 ```c++
 class Base {
