@@ -1,0 +1,29 @@
+- [] SAT solvers for NP completeness proving
+- [] Combinatorics
+- [] Algorithms
+    - [] Get into coding
+    - [] Dynamic Programming
+- [] Maurice Bach, OS
+    - [] [] File System Concepts
+- [] A lot of Networks
+    - Implement stuff
+    - [] Node js is ideal
+        - [] HTTP
+        - [] DNS
+        - [] SMTP
+    - [] scapy
+    - [] wireshark
+- [] Functional
+    - [] Haskell
+    - [] Monads and other shenanigans
+    - [] Type systems
+- [] Security
+    - [] metasploit
+- [] Cryptography onwards in Matt Might
+- [] Statistics
+    - [] Google Data
+    - [] Statistics Udacity
+- [] ML
+    - [] Standford ML
+    - [] Manifold Learning
+    - [] Neural Networks
