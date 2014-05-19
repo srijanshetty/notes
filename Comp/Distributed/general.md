@@ -14,4 +14,3 @@ So, data-flow programming in inherently parrallel.
 
 ## Shared Memory
 - The memory has to be shared between all the workers on the task.
-
