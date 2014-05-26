@@ -1,6 +1,5 @@
 Recepies
 ========
-
 # Unique items from a list
 sort | uniq -c | sort -nr
 
@@ -10,7 +9,7 @@ cut -d" " -f1
 # When piping refer to stdin/stout
 Use '-'
 
-Xargs
+xargs
 =====
 - When you want to use stdin as arguments you use xargs
 
@@ -37,4 +36,18 @@ Cut
 - '-d' delimiter to split on
 - '-f' displays the fields
 
+bc
+==
+- Calculator
 
+expr
+====
+- Evaluates the expression passed to it as arguments
+
+let
+===
+- Evaluate expressions
+
+Composition
+===========
+- Composition is achieved by $()
