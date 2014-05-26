@@ -1,6 +1,7 @@
-# Imperative Programming:
-- Also called as control flow programming, procedural programming
-- This is a programming paradigm which resembles the way code is executed in a
+Imperative Programming
+======================
+Also called as control flow programming, procedural programming
+This is a programming paradigm which resembles the way code is executed in a
 machine, it is very low level in some sense.
 It is mostly sequential programming, with a lot of manipulation of program state
 
@@ -11,7 +12,8 @@ We have constructs like:
 
 A variable represents a memory location and we can directly manipulate it.
 
-# Declarative Programming:
+Declarative Programming
+=======================
 Instead of giving a series of steps to accomplish a task, we essentially spell
 out what the program is supposed to do. For example consider the quicksort
 program in haskell
@@ -30,7 +32,8 @@ accomplish the task. Very common approaches of declarative programming are:
 
 There is very little or no manipulation of state
 
-# Concurrent Programming:
+Concurrent Programming
+======================
 In case of concurrent programming we have multiple threads which are running
 together. Note together here does not mean they are running simultaneously; the
 threads can be running parallely or they may run with pre-emption.
@@ -44,89 +47,11 @@ concurrency. An atomic commit or a transaction is a set of operations which are
 atomic, they are performed together or are not performed at all. This ensures
 consistency in the data at the Data Center.
 
-# Object Oriented Programming:
-Object oriented programming consists of classes, which encapsulate methods and
-variables together. It provides abstraction by the means of public, private and
-protected members.
-
-The relation "is a" is an dependence relation and is captured by
-inheritance: single, multiple etc.
-
-The relation "has a" is an aggregation relation which is what encapsulation
-stands for.
-
-## Polymorphism:
-Parametric polymorphism is to write a function generically so that it handles
-all types identically. Such polymorphism in the OOP world is called parametric
-polymorphism while in the functional world it is called plain polymorphism.
-The programming paradigm is called generic programming.
-
-Ad hoc polymorphism or overloading is when a function can have multiple
-implementaions depeding on the number and types of arguments. This is called
-function overloading or method overloading.
-
-## Inheritance
-
-### Virtual functions
-They are functions that can be overridden by the derived class.
-
-### Extension Methods
-- While most classes have instance methods which can be called upon any type
-- C# has the notion of extension methods, which can extend any interface and
-type
-    - These extension methods look exactly like the instance methods during
-    call.
-    - The advantage is that they allow the base classes to be modified without
-    changing them.
-
-### Interfaces
-- They are abstract classes, they only specify the functions that need to be
-implemented and the dirty work of implementing them is left to each and every
-class that derive from them.
-- So, we can say that a class matches an interface.
-- The idea is really powerful and extensible. We can have a interface callled
-iterable and anything that wants to iterate should match the specifications
-of the interface. Then the for loop can be designed to work with iterables.
-
-```c#
-interface Base {
-    public void someMethod();
-}
-
-class Child : Base {
-    Base.someMethod() {
-        // Write the definition over here
-    }
-}
-
-### Subtyping
-
-```c++
-class Base {
-}
-
-class Child : Base {
-}
-
-Base[] items = new Base[10];
-item[0] = new Child();
-```
-
-- here it doesn't matter that the array is of Base, because
-Child will have all of Base's methods.
-- The compiler will only use the name of methods of Base,
-and they will be present in the virtual function table of Child.
-- Also dynamic dispatch will be needed here because we have no clue
-if Child overides any methods of Base.
-- It is not necessary to have late binding, because we know for sure
-that such a method exists.
-- Subtyping means that anywhere the supertype can be used, the subtype can
-be used.
-
-# Generic Programming
+Generic Programming
+===================
 - The central idea of generic programming is write code which can work for
-all types, i.e., parametric polymorphism is the impetus of this style of
-coding.
+    all types, i.e., parametric polymorphism is the impetus of this style of
+    coding.
 - Functional languages have a transparent support for generic programming.
 - C++ family of languages use templates to implement this
 
@@ -141,3 +66,84 @@ class Stack {
 ```
 
 - Similarly we can have generic functions as well.
+
+Object Oriented Programming
+===========================
+Object oriented programming consists of classes, which encapsulate methods and
+variables together. It provides abstraction by the means of public, private and
+protected members.
+
+The relation "is a" is an dependence relation and is captured by
+inheritance: single, multiple etc.
+
+The relation "has a" is an aggregation relation which is what encapsulation
+stands for.
+
+# Polymorphism:
+Parametric polymorphism is to write a function generically so that it handles
+all types identically. Such polymorphism in the OOP world is called parametric
+polymorphism while in the functional world it is called plain polymorphism.
+The programming paradigm is called generic programming.
+
+Ad hoc polymorphism or overloading is when a function can have multiple
+implementaions depeding on the number and types of arguments. This is called
+function overloading or method overloading.
+
+# Inheritance
+    ## Virtual functions
+    They are functions that can be overridden by the derived class.
+
+    ## Extension Methods
+    - While most classes have instance methods which can be called upon any type
+    - C# has the notion of extension methods, which can extend any interface and
+    type
+        - These extension methods look exactly like the instance methods during
+        call.
+        - The advantage is that they allow the base classes to be modified without
+        changing them.
+
+    ## Interfaces
+    - They are abstract classes, they only specify the functions that need to be
+        implemented and the dirty work of implementing them is left to each and every
+        class that derive from them.
+    - So, we can say that a class matches an interface.
+    - The idea is really powerful and extensible. We can have a interface callled
+        iterable and anything that wants to iterate should match the specifications
+        of the interface. Then the for loop can be designed to work with iterables.
+
+    ```c#
+    interface Base {
+        public void someMethod();
+    }
+
+    class Child : Base {
+        Base.someMethod() {
+            // Write the definition over here
+        }
+    }
+    ```
+
+    ## Subtyping
+
+    ```c++
+    class Base {
+    }
+
+    class Child : Base {
+    }
+
+    Base[] items = new Base[10];
+    item[0] = new Child();
+    ```
+
+    - here it doesn't matter that the array is of Base, because
+    Child will have all of Base's methods.
+    - The compiler will only use the name of methods of Base,
+    and they will be present in the virtual function table of Child.
+    - Also dynamic dispatch will be needed here because we have no clue
+    if Child overides any methods of Base.
+    - It is not necessary to have late binding, because we know for sure
+    that such a method exists.
+    - Subtyping means that anywhere the supertype can be used, the subtype can
+    be used.
+

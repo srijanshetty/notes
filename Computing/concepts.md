@@ -1,6 +1,5 @@
 Parsing
 =======
-
 # Top Down Parsing
     - Recursive Descent Parsing
         Recursively find a matching lookhead and expand upon it's production
@@ -13,27 +12,27 @@ Parsing
     - LR
     - LALR
 
-Semantics
-=========
-
-# Short Circuit evaluation:
-    - Evaluate the second parameter only if needed. Examples are short circuit
+Short Circuit evaluation
+========================
+- Evaluate the second parameter only if needed. Examples are short circuit
     AND, OR and the like.
 
-# Parameter Passing
-    1. **Call by value:**
-        Copy the value to the function
-    2. **Call by reference:**
-        Use the function address, to reference back to the same function
-    3. **Call by need:**
-        Evaluate the arguments only when needed and store this evaluations.
-    4. **Call by name:**
-        Copy the entire expression of the argument and evaluate every time when needed.
+Parameter Passing
+=================
+1. **Call by value:**
+    Copy the value to the function
+2. **Call by reference:**
+    Use the function address, to reference back to the same function
+3. **Call by need:**
+    Evaluate the arguments only when needed and store this evaluations.
+4. **Call by name:**
+    Copy the entire expression of the argument and evaluate every time when needed.
 
-# Binding
-    - It is the association of a value to an identifier.
+Binding
+=========
+- It is the association of a value to an identifier.
 
-## Early Binding
+# Early Binding
     - At compile time, you have assigned a type to a variable or the body to a function
     identifier.
     - In the example below, we have assigned the body to the function at compile time.
@@ -44,7 +43,7 @@ Semantics
     }
     ```
 
-## Late binding
+# Late binding
     - Here the function body is assigned to the identifier at compile time.
 
     ```c++
@@ -55,18 +54,20 @@ Semantics
     void *pointer(string) = print;
     ```
 
+Dispatch
+========
 # Dynamic Dispatch
     - Selection of the function to be called at runtime.
     - The reason for implementation is simple:
         - So, we have an object of a type, it will have a virtual function table. The vf table
-        stores pointers to the function.
+            stores pointers to the function.
         - If the derived class has overridden a virtual function
-        then we need to select the overridden method, else we need to select the original
-        implementation.
+            then we need to select the overridden method, else we need to select the original
+            implementation.
         - This entire concept is nicely handled by pointer redirection and vft's and hence we
-        need dynamic dispatch.
+            need dynamic dispatch.
 
-## Single dispatch
+# Single dispatch
     - The dispatch happens only considering the object name.
 
     ```c++
@@ -82,39 +83,76 @@ Semantics
     srijan.eat(); // Here srijan's eat will be called
     ```
 
-## Multiple Dispatch
+# Multiple Dispatch
     - All the parameters of a funciton and not only the object name are considered for
-    dispatch.
+        dispatch.
 
 # Static Dispatch
     - Hard code the function address directly.
 
-## Operator Overloading
-    - Operator overloading is done at compile time, hence it uses static dispatch.
+Operator Overloading
+====================
+- Operator overloading is done at compile time, hence it uses static dispatch.
 
-    ```c++
-     class Person {
-         public void eat (Food f) { println ("eating food"); }
-         public void eat(Pasta p) { println ("eating pasta"); }
-    }
+```c++
+ class Person {
+     public void eat (Food f) { println ("eating food"); }
+     public void eat(Pasta p) { println ("eating pasta"); }
+}
 
-    Food food = new Pasta();
-    somePerson.eat(food); // The output is 'eating food'
-    ```
+Food food = new Pasta();
+somePerson.eat(food); // The output is 'eating food'
+```
 
-# Dynamic Languages
-    - We have dynamically created the property 'name'.
-    - Since it is an interpreted language, when obj is created,
+Dynamic Languages
+=================
+- We have dynamically created the property 'name'.
+- Since it is an interpreted language, when obj is created,
     we have no clue that it can have such a property. Hence, we cannot
     allocate space beforehand, same is true for functions.
-    - Hence we say that the list of methods can be altered at runtime.
+- Hence we say that the list of methods can be altered at runtime.
 
-    ```javascript
-    var obj = {};
-    obj['name'] = 'srijan';
-    ```
+```javascript
+var obj = {};
+obj['name'] = 'srijan';
+```
+
+Type Systems
+============
+# Duck Typing
+    - In static type systems, the type of an object determines what operations
+        it can perform and the compiler enforces this at runtime.
+    - Dynamic type systems do the same but at run time.
+    - In duck typed languages, the programmer can call any method on any object.
+    - It's upto him to make sure that the object in question has the particular
+        method.
+    - Duck typed systems issue a runtime error if the method is not found.
+
+Sugar
+=====
+A syntactic construct which is convereted into it's equivalent at compile time.
+
+```
+obj.method() -> method(obj)
+```
+
+Reflection
+==========
+- Reflection allows you to detemine the properties/fields of an object at compile
+    time and use them.
+- It inspects the metadata to see if an object/type contains a method/field.
+
+```js
+if ( obj.method ) {
+    obj.method();
+}
+```
+
+- Here we check the existence of the method and only then call it.
+
 
 References
 ==========
-    - [http://condor.depaul.edu/ichu/csc447/notes/wk10/Dynamic2.htm]
-    - [http://philogb.github.io/blog/2009/02/08/generic-functions-and-javascript/]
+- [http://condor.depaul.edu/ichu/csc447/notes/wk10/Dynamic2.htm]
+- [http://philogb.github.io/blog/2009/02/08/generic-functions-and-javascript/]
+sugar.md
