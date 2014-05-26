@@ -39,3 +39,34 @@ worker has to perform multiple tasks. This makes sure that each worker is busy
 at any given point of time. (Additional benefit is when faults happen, recovery is
 fast).
 
+GFS
+===
+# Assumptions
+- Nodes fail often
+- Append is the common operation
+
+# Design Decisions
+- Differers from POSIX (slightly)
+- snapshot and append are new calls.
+
+# Implementation
+- A single master whose state has a fine grained check pointing.
+- Other nodes are data nodes.
+- A file is stored in 64Mb chunks and the master has a record of the chunk mapping.
+- Replicas of the chunks is kept in many nodes.
+- The map may go out of sync so, nodes send digest messages to the master.
+
+## Read
+- Master sees the map and tell the client which directly communicates.
+
+## Write
+- Master tells the client the mapping.
+- The data node tries a write, asks other nodes to write. This operation may fail.
+- A lock called lease is handed over to the primary when writing for consistency.
+
+## Append
+- A failed append may be due to node failure or write fail.
+- The former is solved by resync with master. In the latter, junk is added to the file.
+- The onus is on the client to replay the message.
+
+
