@@ -1,27 +1,3 @@
-Databases
-=========
-# Data-warehouse
-- This collects information from different databases.
-- This is meta data about databases, used for queries by
-higher level management.
-
-# Data-center
-- A group of networked computer servers used for remote storage and
-distribution of large amount of data.
-- They had redundant power suppy, network supply.
-- Might consume as much power as a small town.
-- Plus they need air conditioning.
-
-Service Level Agreement
-=======================
-A clause in a service contract.
-
-Bulk Loading
-============
-- Usually data is inserted one at a time in a database.
-- Bulk loading allows a chunck of data to be inserted into the
-    database at once.
-
 Transactions
 ============
 An indivisible operation is called a transaction. A transaction must fail or
@@ -41,7 +17,7 @@ reliable.
 
 # Atomicity
 - This means every transaction is a *all or nothing* deal, either the transaction
-    goes through completely or it doesn't happen at all.
+    goes through completely or it doesnt happen at all.
 
 # Consistency
 - Consistency is specified by the domain.
@@ -89,6 +65,38 @@ Consistency vs Availability(Latency/Response Time) Debate
 - We can have relaxed consistency for availability.
 - A buisness like hotels may want high availability, hence it allows for double
     bookings as it always has extra rooms.
+
+Scaling
+=======
+# Horizontal Scaling
+- Adding more nodes to the cluster and partitioning the data
+
+# Vertical Scaling
+- Keeping the data in one place but adding more compute power to the server.
+
+# Data-warehouse
+- This collects information from different databases.
+- This is meta data about databases, used for queries by
+higher level management.
+
+Databases
+=========
+# Data-center
+- A group of networked computer servers used for remote storage and
+distribution of large amount of data.
+- They had redundant power suppy, network supply.
+- Might consume as much power as a small town.
+- Plus they need air conditioning.
+
+Service Level Agreement
+=======================
+A clause in a service contract.
+
+Bulk Loading
+============
+- Usually data is inserted one at a time in a database.
+- Bulk loading allows a chunck of data to be inserted into the
+    database at once.
 
 Reference
 =========
