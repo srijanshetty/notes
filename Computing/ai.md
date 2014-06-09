@@ -44,7 +44,7 @@ distribution is Gaussian in each measurement, since the only distribution which
 is completely described by variance is the Gaussian distribution.
 
 Solving PCA now requires diagonalizing the covariance matrix of Y. This requires
-finding the eigenvectors of XX' and these are the directions of maximum variance.
+finding the eigenvectors of XX'' and these are the directions of maximum variance.
 
 # Best Fit Line
 ---------------
@@ -58,7 +58,7 @@ orthogonal to the curve.
 
 # Topology
 ----------
-Rubber sheet geometry, we don't care about distances, all we care about is the 
+Rubber sheet geometry, we dont care about distances, all we care about is the 
 connectedness of points. For example: a circle and square have the same topology
 because the connectedness is the same.
 A topological space consists of a set of points and a set of open sets called 
@@ -95,87 +95,3 @@ A linear model is one in which the dependent variable is linearly dependent on t
 
 Here the dependent variable 'y' depends on the independent variable 'x'. This concept then can be extended to 
 multivariate linear models.
-
-# Bishop
---------
-
-Steps of Learning
-- Preprocessing
-  - Feature Extraction
-- Training/Learning
-  - Generalization
-  - test set
-
-- Supervised learning
-  - Classification
-  - Regression
-
-- Unsupervised learning
-  - Clustering
-  - Density Estimation
-  - Visualization
-
-- Reinforcement learning
-  - credit assignment
-  - exploration
-  - exploitation
-
-- Polynomial Curve Fitting
-  - Linear Model
-  - Error Function (Sum of squares)
-  - Over fitting
-  - Maximum Likelihood
-  - E_RMS
-  - Without regularization :
-        -one fifth or one-tenth of the number of data points (Never good to estimate parameters from data) 
-  - Regularization (Shrinkage) : Ridge Regression (Using a quadratic regularizer)
-  - Training/Validation Set (Hold out set)
-  - We are trying to minimize the variance of the data in the orthogonal coordinates, after takin the curve
-    to be the mean value of the data. (Which as we will see, is not a 
-
-- Maximum likelihood
-  - The parameters w need to be evaluated in any model.
-  - In case of the frequentist approach, what we do is that we assume that there is one optimal value of w
-    and try finding it. 
-  - This is done by maximizing the likelihood which is the probability of getting the 
-    data given we have taken a particular value of w. This is the method of maximum likelihood.
-  - In max likelihood p(D/w) is maximized or E(w) = -log p(D/w) is minimized to obtain an optimum w.
-  - We have to optimize with respect to each of the parameter.
-  - When we consider i.i.d sampling of a set of data and try to fit it to a Gaussian distribution, we
-    get the mean of the final distribution to be equal to the sample mean and the variance equal to the
-    sample variance.
-    - But this systematically underestimates the variance and we should take a different variance
-    - The problem is elevated when the sample size is infinite.
-    - v(ML) = (N-1)*v/N
-    - v(ML) = Sum (x-u)^2 /N-1
-  - Bootstapping is the method in which, L random samples of size N of a size N data set are generated
-    and the value of w is seen in each of these data sets.
-
-- Bayesian Approach
-  - The parameters w need to be evaluated in any model.
-  - Bayesian approach believes that w is variable and we have only one set of data D. Using this set of 
-    data, we evaluate the uncertainity in w after seeing the data which is p(w/D) or the posterior.
-
-        postertior = c * likelihood * prior
-
-  - The prior is chosen according to mathematical convinience and hence the results are subjective.
-  - Non informative priors can be used but that does not help in measuring the models.
-  - In most Bayesian methods, we need a sample or D. With the help of Monte Carlo methods, we can 
-    generate this sample and so Bayesian methods have gained prominence in recent times. (Also 
-    processor speeds have gone up which make it easier for sample generation).
-
-Model Theory
-  - Cross Validation
-    - might be difficult is computation is expensive
-    - might be difficult if the number of models is exponential
-  - Regularizer
-
-Curse of Dimensionality
-  - Polynomial degree increases by a factor of D^M
-  - Exponential increase in computation with increase in dimension
-  - Not a problem in practice
-    - Manifolds
-    - local dependencies, smoothen the data
-
-Decision Theory
-  - 
