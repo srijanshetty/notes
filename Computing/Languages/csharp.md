@@ -68,8 +68,58 @@ Func<int, int> task = delegate(int value) {
 
 Lambdas
 =======
-- D'oh
+- Doh
 
+Tasks in C#
+===========
+- They run in thread pools: which are essentially threads which have been
+precreated and any function can be delegated to them with minimal bootstrapping
+time.
+
+// Creating a task using a constructor
+Task task = new Task(new Action(FunctionName)); // Here we wrap the function by an Action
+Task task = new Task(delegate { FunctionName() }); // Here we create an anonymous delegate
+Task task = new Task(() => FunctionName() ); // Here we create a lambda
+
+// We have to start these tasks explicity
+task.Start();
+// We can wait on tasks
+task.Wait();
+
+// To directly run a function
+Task.Run(() => FunctionName());
+Task.Factory.StartNew( () => FunctionName()); // For more control the following concotion works
+
+// A continuation to the task
+Task.Run(() => FunctionName()).ContinueWith(taskName => Console.Write(taskName.Result));
+
+// A continuation to a function
+task.ContinueWith(taskName => Console.Write(taskName.Result));
+
+- The result property of tasks implicity waits on the task, so it is better to
+use a continuation
+
+- A task does not accept any arguments, but can return a result. 
+    - In case it Areturns a result encapsulate the function in Func<> : Task<TResult>
+    - If it does not return a result, encapsulate the function in Action : Task
+
+- Tasks are the basic primitives for threads.
+- They spawn new thread in the background.
+
+
+Async/ Await pattern
+======================
+- These keywords do not create new threads. They are a way to manage
+continuations.
+- Everything that can be done by async/await can be achieved by ContinueWith
+- To use the pattern, we need the follow:
+    1. A LongRunningMethod
+    2. A wrapper method which asynchronously runs the LongRunningMethod and
+    returns a task<>
+    3. An async function which awaits on the wrapper method.
+
+```c#
+private static async void CallLongRunningMethod(string message) {
 Checked Context
 ===============
 - A checked context is one which raises an arithematic overflow exception
@@ -89,3 +139,4 @@ Abstract Classes
 Readonly
 ========
 - readonly fields can be assigned to only at declaration or in constructors.
+
