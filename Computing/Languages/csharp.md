@@ -46,8 +46,7 @@ Delegates
 public delegate double someFunction(double value);
 ```
 
-Actions
-=======
+# Action
 - A delegate with a single input and no return
 
 ```c#
@@ -56,8 +55,7 @@ Action<int> task = delegate(int value) {
 };
 ```
 
-Func
-====
+# Func
 - A delegate which can take inputs and produce output
 
 ```c#
@@ -66,8 +64,7 @@ Func<int, int> task = delegate(int value) {
 };
 ```
 
-Lambdas
-=======
+# Lambdas
 - Doh
 
 Tasks in C#
@@ -119,7 +116,10 @@ continuations.
     3. An async function which awaits on the wrapper method.
 
 ```c#
-private static async void CallLongRunningMethod(string message) {
+private static async void CallLongRunningMethod(string message) 
+```
+
+
 Checked Context
 ===============
 - A checked context is one which raises an arithematic overflow exception
@@ -130,11 +130,6 @@ checked {
     // Some computation which will be checked for Overflow exception
 }
 ```
-
-Abstract Classes
-================
-- Classes for which you want no objects
-- They only serve as base classes.
 
 Readonly
 ========

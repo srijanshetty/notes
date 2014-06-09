@@ -42,7 +42,7 @@ Two models are used for synchronization:
     1. Message Passing
     2. Shared memory
 
-There's also this concept of atomic commits or transactional memory in case of
+Theres also this concept of atomic commits or transactional memory in case of
 concurrency. An atomic commit or a transaction is a set of operations which are
 atomic, they are performed together or are not performed at all. This ensures
 consistency in the data at the Data Center.
@@ -136,8 +136,8 @@ function overloading or method overloading.
     item[0] = new Child();
     ```
 
-    - here it doesn't matter that the array is of Base, because
-    Child will have all of Base's methods.
+    - here it doesnt matter that the array is of Base, because
+    Child will have all of Bases methods.
     - The compiler will only use the name of methods of Base,
     and they will be present in the virtual function table of Child.
     - Also dynamic dispatch will be needed here because we have no clue
@@ -146,4 +146,8 @@ function overloading or method overloading.
     that such a method exists.
     - Subtyping means that anywhere the supertype can be used, the subtype can
     be used.
+
+# Abstract Classes
+- Classes for which you want no objects
+- They only serve as base classes.
 
