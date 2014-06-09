@@ -70,3 +70,35 @@ GFS
 - The onus is on the client to replay the message.
 
 
+Collossus
+=========
+- Successor to GFS
+- Uses database triggers which run every time some data is entered into the
+database.
+    - Triggers are costly and not performant. So we can safely assume that
+    google had to employ some Frankenstein hacks and ingenious engineering
+    to make them performant.
+
+Millwheel
+=========
+- Like storm, it has topologies.
+- Each node is called a computation and it subsribes to streams.
+- A tuple is a (key, value, timestamp) triple
+- Each computation provides a key extractor and only selects some tuples from a
+stream.
+- There are three good ideas:
+    1. Idemptoency by keeping track of each production. This requires commiting
+    bookeeping information from each node and checking for duplication every
+    time a node recieves a tuple.
+    2. Low watermark which is a sort of global timeline indicating the amount
+    of work left throughout the system.
+    3. Persistent storage: Spanner and BigTable are the backing store.
+- Strong productions are used, which means that a production is committed before
+sending down the wire.
+- Each computation is issued a sequencer and if it fails, the new node is issued
+another sequencer, this prevents zombie writes to the database.
+- A single master which maintains the entire databse is present.
+
+BigTable
+========
+- Column Storage
