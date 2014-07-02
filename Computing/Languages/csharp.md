@@ -1,3 +1,19 @@
+OOP
+===
+
+# Inheritence
+- abstract, interface
+- base, this
+
+# Polymorphism
+- virtual, override
+
+# is
+- Determines whether an object belongs to some type
+
+# as
+- Use an object as another compatible type
+
 .NET
 ====
 - It is a framework which provides a runtime called CLR (Common Language

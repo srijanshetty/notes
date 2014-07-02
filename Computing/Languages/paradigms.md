@@ -147,7 +147,14 @@ function overloading or method overloading.
     - Subtyping means that anywhere the supertype can be used, the subtype can
     be used.
 
-# Abstract Classes
-- Classes for which you want no objects
-- They only serve as base classes.
+    ## Abstract Classes
+    - Classes for which you want no objects
+    - They only serve as base classes.
+
+    ## 'base' keyword
+    - This is used to invoke the constructor of the base class from a derived
+    class.
+
+    ## 'this' keyword
+    - Refers the current object. Can be also used to call some constructor
 
