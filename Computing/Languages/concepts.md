@@ -2,7 +2,7 @@ Parsing
 =======
 # Top Down Parsing
     - Recursive Descent Parsing
-        Recursively find a matching lookhead and expand upon it's production
+        Recursively find a matching lookhead and expand upon its production
     - LL Parsing
 
 # Bottom Up Parsing
@@ -64,7 +64,7 @@ Dispatch
         - If the derived class has overridden a virtual function
             then we need to select the overridden method, else we need to select the original
             implementation.
-        - This entire concept is nicely handled by pointer redirection and vft's and hence we
+        - This entire concept is nicely handled by pointer redirection and vfts and hence we
             need dynamic dispatch.
 
 # Single dispatch
@@ -80,7 +80,7 @@ Dispatch
     }
 
     Person srijan = new Student();
-    srijan.eat(); // Here srijan's eat will be called
+    srijan.eat(); // Here srijans eat will be called
     ```
 
 # Multiple Dispatch
@@ -124,13 +124,13 @@ Type Systems
         it can perform and the compiler enforces this at runtime.
     - Dynamic type systems do the same but at run time.
     - In duck typed languages, the programmer can call any method on any object.
-    - It's upto him to make sure that the object in question has the particular
+    - Its upto him to make sure that the object in question has the particular
         method.
     - Duck typed systems issue a runtime error if the method is not found.
 
 Sugar
 =====
-A syntactic construct which is convereted into it's equivalent at compile time.
+A syntactic construct which is convereted into its equivalent at compile time.
 
 ```
 obj.method() -> method(obj)
@@ -155,4 +155,3 @@ References
 ==========
 - [http://condor.depaul.edu/ichu/csc447/notes/wk10/Dynamic2.htm]
 - [http://philogb.github.io/blog/2009/02/08/generic-functions-and-javascript/]
-sugar.md
