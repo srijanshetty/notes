@@ -76,3 +76,13 @@ Always use an annotated tag so that git describe can be used later on
 # git describe
 --------------
 Gives the number of commits relative to a previous tag which was made.
+
+# Chang Submodules repo
+------------------------
+- To change the url, just edit .gitmodules and run git submodule sync
+
+# Remove submodule
+==================
+```Shell
+git submodule deinit <path>
+git rm <name>
