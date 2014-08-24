@@ -1,0 +1,3 @@
+[submodule "tools/git-flight-rules"]
+	path = tools/git-flight-rules
+	url = https://github.com/k88hudson/git-flight-rules.git
