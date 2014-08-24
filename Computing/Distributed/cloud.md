@@ -27,10 +27,3 @@ Hardware as a service
 Chef/Puppet
 ===========
 - Automation of mass installations
-
-Todo
-====
-- Use Vagrant/Docker
-- DevOps
-- Overcommit
-- Puppet
