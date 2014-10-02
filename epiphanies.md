@@ -1,3 +1,11 @@
+Slope of a curse
+----------------
+
+- Slope measures in which direction am I going and by how much amount.
+- Second derivative gives the movement of slope, as in is the movement increasing
+    with time, decreasing or is steady.
+
+
 # X-bit aligned:
 If something in memory is x-bit aligned, this means we can only occupy the
 memory locations which are multiples of x.
@@ -23,7 +31,7 @@ infinites. Taking a single infinite path can lead us to a single infinity.
 # Infinite Sets
 
 ## Elements in an infinte set:
-- A set is countable if there exists a bijective between the set and N. 
+- A set is countable if there exists a bijective between the set and N.
 - Countable union of countable sets is countable.
 - Finite union of finite sets is finite.
 
